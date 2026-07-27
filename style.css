@@ -59,6 +59,20 @@ h1 {
   margin: 0 auto 0.8rem auto;
 }
 
+.powered-by {
+  font-size: 0.8rem;
+  color: #4B5563;
+  margin-top: 0.3rem;
+}
+.powered-by a {
+  color: #174EA6;
+  text-decoration: none;
+  font-weight: bold;
+}
+.powered-by a:hover {
+  text-decoration: underline;
+}
+
 .mode-badge {
   display: inline-block;
   padding: 0.2rem 0.7rem;
