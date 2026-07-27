@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CertChain — Blockchain Certificate Verification</title>
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logos">
+        <img src="iitj-logo.png" alt="IITJ Logo" class="logo-img" />
+        <img src="Lab-Logo.png" alt="Lab Logo" class="logo-img" />
+      </div>
+      <h1>CertChain — Blockchain Certificate Verification</h1>
+      <p class="subtitle">Indian Institute of Technology Jodhpur &mdash; VANET LAB &bull; Powered by CertChain</p>
+      <p class="description">
+        This certificate is secured on the Ethereum blockchain (Sepolia testnet).
+        Each certificate's data is hashed and stored on-chain, making it
+        <strong>tamper-proof</strong> and instantly verifiable from anywhere in the world.
+        No intermediary or database needed &mdash; just the blockchain.
+      </p>
+      <span id="modeBadge" class="mode-badge">Initializing...</span>
+    </header>
+
+    <main>
+      <div class="card verify-card">
+        <h2>Verify a Certificate</h2>
+        <p class="hint">Enter the certificate number (e.g. CERT-260586)</p>
+        <div class="input-group">
+          <input type="text" id="certInput" placeholder="CERT-XXXXXX" />
+          <button id="verifyBtn">Verify</button>
+        </div>
+        <div id="statusMsg" class="status-msg"></div>
+      </div>
+
+      <div id="resultCard" class="card result-card hidden">
+        <div class="result-header">
+          <span id="validityBadge" class="badge"></span>
+        </div>
+        <table class="details-table">
+          <tr>
+            <td class="label">Student Name</td>
+            <td id="studentName" class="value">-</td>
+          </tr>
+          <tr>
+            <td class="label">Issue Date</td>
+            <td id="issueDate" class="value">-</td>
+          </tr>
+          <tr>
+            <td class="label">Period</td>
+            <td id="period" class="value">-</td>
+          </tr>
+          <tr>
+            <td class="label">Project Name</td>
+            <td id="projectName" class="value">-</td>
+          </tr>
+          <tr>
+            <td class="label">Issued On (Blockchain)</td>
+            <td id="issuedAt" class="value">-</td>
+          </tr>
+          <tr>
+            <td class="label">Transaction</td>
+            <td id="txHashCell" class="value"><span id="txHash">-</span></td>
+          </tr>
+        </table>
+        <div id="etherscanLink" class="etherscan-link hidden">
+          <a id="etherscanAnchor" href="#" target="_blank">View on Etherscan ↗</a>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p><a href="https://vanets-iitj.github.io/" target="_blank">VANET LAB</a> &bull; <a href="https://www.iitj.ac.in/computer-science-engineering" target="_blank">Department of Computer Science and Engineering</a> &bull; <a href="https://www.iitj.ac.in/" target="_blank">Indian Institute of Technology Jodhpur</a></p>
+      <p><a href="https://github.com/TakMashhido/CertChain" target="_blank">CertChain</a> &mdash; Blockchain Certificate Verification System</p>
+      <p>&copy; 2026 <a href="https://www.linkedin.com/in/takmashhido/" target="_blank">Koustav Kumar Mondal</a>. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <script src="certs-map.js?v=1784223156"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/6.13.2/ethers.umd.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
